@@ -19,7 +19,7 @@ button.onclick= function () {
 
 // submit name
 var nameInput = document.getElementById('name');
-var name = nameInput.value;
+var nameInputvalue = nameInput.value;
 var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function() {
     // make request with name, capture list of names
@@ -38,7 +38,7 @@ submitButton.onclick = function() {
         }
     };
 
-    request.open("GET", "http://andreasbraumann.imad.hasura-app.io/name/"+name, "true");
+    request.open("GET", "http://andreasbraumann.imad.hasura-app.io/name/"+nameInputvalue, "true");
     request.send(null);
     
 };
