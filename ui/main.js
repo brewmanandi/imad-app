@@ -18,11 +18,13 @@ button.onclick= function () {
 };
 
 // submit name
-var nameInput = document.getElementById('name');
-var nameInputvalue = nameInput.value;
 var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function() {
     // make request with name, capture list of names
+    var nameInput = document.getElementById('name');
+    var nameInputvalue = nameInput.value;
+
+
     var request = new XMLHttpRequest();
      request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
