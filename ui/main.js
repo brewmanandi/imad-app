@@ -5,7 +5,7 @@ button.onclick= function () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                var counter = request.responseText
+                var counter = request.responseText;
                 var span = document.getElementById("count");
                 span.innerHTML = counter.toString();
             }
@@ -15,7 +15,7 @@ button.onclick= function () {
     
     request.open("GET", "http://andreasbraumann.imad.hasura-app.io/counter", "true");
     request.send(null);
-}
+};
 
 // submit name
 var nameInput = document.getElementById('name');
@@ -41,4 +41,4 @@ submitButton.onclick = function() {
     request.open("GET", "http://andreasbraumann.imad.hasura-app.io/name/"+name, "true");
     request.send(null);
     
-}
+};
