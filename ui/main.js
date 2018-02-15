@@ -40,7 +40,7 @@ submitButton.onclick = function() {
         }
     };
 
-    request.open("GET", "http://andreasbraumann.imad.hasura-app.io/name/"+nameInputvalue, "true");
+    request.open("GET", "http://andreasbraumann.imad.hasura-app.io/submit-name?name="+nameInputvalue, "true");
     request.send(null);
     
 };
