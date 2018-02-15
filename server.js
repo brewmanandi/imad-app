@@ -86,6 +86,7 @@ app.get('/counter', function (req, res) {
 
 var names = [];
 app.get('/name/:currentName', function (req, res) {
+    var currentName = req.params.currentName
     names.push(currentName);
     res.send(JSON.stringify(names));
 });
