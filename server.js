@@ -36,7 +36,7 @@ function createTemplate(data) {
             </div>
             <br>
             <div class="center text-big bold">
-                ${date}
+                ${date}<br><br>
                 ${content}
             </div>
             <script type="text/javascript" src="/ui/main.js">
