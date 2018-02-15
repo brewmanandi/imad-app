@@ -84,12 +84,17 @@ app.get('/counter', function (req, res) {
     res.send(counter.toString());
 });
 
+var names = [];
+app.get('/name/:currentName', function (req, res) {
+    names.push(currentName);
+    res.send(JSON.stringify(names));
+});
+
+
 
 app.get('/:articleName', function (req, res) {
     res.send(createTemplate(articles[req.params.articleName]))
 });
-
-
 
 
 
