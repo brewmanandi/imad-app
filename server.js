@@ -73,7 +73,7 @@ const pool = new Pool()
 app.get('/test-db', function(req, res) {
     pool.query("SELECT * from test", function (err, result) {
         if (err) {
-            res.status(500).send(err.toString() + " " + process.env.DB_PASSWORD);
+            res.status(500).send(err.toString());
         } else {
             res.send(JSON.stringify(result));
         }
