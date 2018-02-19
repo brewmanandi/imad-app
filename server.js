@@ -70,7 +70,7 @@ function createTemplate(data) {
 const pool = new Pool()
 
 
-app.get('test-db', function(req, res) {
+app.get('/test-db', function(req, res) {
     pool.query("SELECT * from test", function (err, result) {
         if (err) {
             res.status(500).send(err.toString());
