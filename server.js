@@ -93,7 +93,7 @@ app.get('/name/:currentName', function (req, res) {
 app.get('/articles/:articleName', function (req, res) {
     var articleName = req.params.articleName;
     
-    pool.query("SELECT * FROM articles WHERE title= '"+articleName+"'", function (err, result) {
+    pool.query("SELECT * FROM articles WHERE title= $1", [req.params.articleName], function (err, result) {
         if (err) {
             res.status(500).send(err.toString());
         } else {
