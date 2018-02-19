@@ -67,7 +67,7 @@ function createTemplate(data) {
 
     return htmlTemplate
 }
-const pool = new Pool()
+const pool = new Pool(config)
 
 
 app.get('/test-db', function(req, res) {
