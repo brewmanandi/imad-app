@@ -106,7 +106,8 @@ app.post('/login', function(req, res) {
                 if (hashedPassword === dbPassword) {
                     res.send('User logged in.');
                 } else {
-                    res.send(403).send("username/password is invalid");
+                    res.statusCode = 403;
+                    res.send("username/password is invalid");
                 }
             }
             
