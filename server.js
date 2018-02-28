@@ -103,7 +103,7 @@ app.post('/login', function(req, res) {
                 var dbPassword = result.rows[0].password;
                 var salt = dbPassword.split('$')[2];
                 var hashedPassword = hash(password, salt); // create hash based on submitted pw and original salt
-                if (hashedPassword === dbString) {
+                if (hashedPassword === dbPassword) {
                     res.send('User logged in.');
                 } else {
                     res.send(403).send("username/password is invalid");
