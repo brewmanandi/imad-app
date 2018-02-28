@@ -100,7 +100,7 @@ app.post('/login', function(req, res) {
                 res.send(403).send('username/password is invalid');
             } else {
                 // match pw
-                var dbPassword = result.rows[0].password
+                var dbPassword = result.rows[0].password;
                 var salt = dbPassword.split('$')[2];
                 var hashedPassword = hash(password, salt); // create hash based on submitted pw and original salt
                 if (hashedPassword === dbString) {
@@ -140,7 +140,7 @@ app.get('/counter', function (req, res) {
 
 var names = [];
 app.get('/name/:currentName', function (req, res) {
-    var currentName = req.params.currentName
+    var currentName = req.params.currentName;
     names.push(currentName);
     res.send(JSON.stringify(names));
 });
