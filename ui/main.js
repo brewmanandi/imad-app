@@ -1,10 +1,6 @@
 // submit username/password to login
 var submitButton = document.getElementById("submit_btn");
 submitButton.onclick = function() {
-    // make request with name, capture list of names
-    var nameInput = document.getElementById('name');
-    var nameInputvalue = nameInput.value;
-
     // create a request object
     var request = new XMLHttpRequest();
     
