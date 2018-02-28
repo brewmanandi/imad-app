@@ -5,8 +5,10 @@ submitButton.onclick = function() {
     var nameInput = document.getElementById('name');
     var nameInputvalue = nameInput.value;
 
-
+    // create a request object
     var request = new XMLHttpRequest();
+    
+    // capture response and store it in a variable
      request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
@@ -18,6 +20,7 @@ submitButton.onclick = function() {
                 alert("Something went wrong on the server");
             }
         }
+        // not done yet
     };
 
     var username = document.getElementById('username').value;
