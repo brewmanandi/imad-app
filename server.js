@@ -97,7 +97,7 @@ app.post('/login', function(req, res) {
             res.status(500).send(err.toString());
         } else {
             if (result.rows.length===0) {
-                res.send(403).send('username/password is invalid');
+                res.status(403).send('username not found');
             } else {
                 // match pw
                 var dbPassword = result.rows[0].password;
