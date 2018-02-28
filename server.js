@@ -63,7 +63,7 @@ app.get('/test-db', function(req, res) {
 app.get('/hash/:input', function(req, res) {
     var hashedString = hash(req.params.input);
     res.send(hashedString, 'random-string');
-}
+});
 
 function hash(input, salt) {
     var hashed = pbkdf2Sync(input, salt, 10000, 512, 'sha512');
