@@ -61,8 +61,8 @@ app.get('/test-db', function(req, res) {
 
 
 app.get('/hash/:input', function(req, res) {
-    var hashedString = hash(req.params.input);
-    res.send(hashedString, 'random-string');
+    var hashedString = hash(req.params.input, "random-string");
+    res.send(hashedString);
 });
 
 function hash(input, salt) {
