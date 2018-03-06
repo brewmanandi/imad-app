@@ -87,7 +87,7 @@ app.post('/create-user', function (req, res) {
        if (err) {
             res.status(500).send(err.toString());
         } else {
-            res.send("User successfully created: " + username);
+            res.send('{"message": "User successfully created: ' + username + '"}');
         }
    });
 });
@@ -103,7 +103,7 @@ app.post('/login', function(req, res) {
             res.status(500).send(err.toString());
         } else {
             if (result.rows.length===0) {
-                res.status(403).send('username not found');
+                res.status(403).send('{"message": "username not found"}');
             } else {
                 // match pw
                 var dbPassword = result.rows[0].password;
@@ -119,7 +119,7 @@ app.post('/login', function(req, res) {
                     res.send('{"message": "User logged in."}');
                     
                 } else {
-                    res.status(403).send("username/password is invalid");
+                    res.status(403).send('{"message": "username/password is invalid"}');
                 }
             }
         }
