@@ -116,7 +116,7 @@ app.post('/login', function(req, res) {
                     // internally, on server side, it maps the session id to an object
                     // { auth: {userId}}
                     
-                    res.send('User logged in.');
+                    res.send('{"message": "User logged in."}');
                     
                 } else {
                     res.status(403).send("username/password is invalid");
